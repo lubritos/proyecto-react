@@ -1,4 +1,5 @@
 import Logo from '../assets/img/logo.png';
+import CartWitget from './CartWidget';
 
 const NavBar = () => {
     return (
@@ -27,7 +28,7 @@ const NavBar = () => {
                     </ul>
                     <form className="d-flex">
                         <i class="fas fa-search text-white fs-4 mx-3"></i>
-                        <i class="fas fa-shopping-cart text-white fs-4 mx-3"></i>
+                        <CartWitget />
                     </form>
                     </div>
                 </div>
