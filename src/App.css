@@ -1,12 +1,30 @@
 .App {
   text-align: center;
 }
-
+body {
+  font-family: 'Scheherazade New', serif;
+}
+.bg-purple {
+  background-color: #32355d;
+}
+.c-purple {
+  color:#8e63dd;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+.search:hover {
+    background-color:#8e63dd; 
+    color:#fff;
+}
+.backgroundNavBar {
+  background-image:url('./assets/img/banner.jpg');
+  background-position: 50% 66%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
