@@ -18,6 +18,17 @@ body {
     background-color:#8e63dd; 
     color:#fff;
 }
+.btn-outline-purple {
+  color: #8e63dd;
+  border-color:#8e63dd ;
+
+}
+.btn-outline-purple:hover {
+  color: #fff;
+  background-color: #8e63dd;
+  border-color: #8e63dd;
+
+}
 .backgroundNavBar {
   background-image:url('./assets/img/banner.jpg');
   background-position: 50% 66%;

@@ -1,5 +1,5 @@
-import Logo from '../assets/img/logo.png';
-import CartWitget from './CartWidget';
+// import Logo from '../../assets';
+import CartWitget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
     return (
@@ -8,7 +8,7 @@ const NavBar = () => {
                 <div className="container-fluid">
                     <div id="logo" className="d-flex flex-column">
                         <span>
-                            <img src={Logo} width="40" alt=""/>
+                            <img src={`${process.env.PUBLIC_URL}/assets/img/logo.png`} width="40" alt=""/>
                         </span>
                         <span className="text-white fw-bold fs-5">
                             Elephant
@@ -23,7 +23,13 @@ const NavBar = () => {
                             <a className="nav-link text-white fw-bold text-capitalize fs-5 active" aria-current="page" href="#Home">Home</a>
                         </li>
                         <li className="nav-item p-3 m-3">
-                            <a className="nav-link text-white fw-bold text-capitalize fs-5" href="#Link">Link</a>
+                            <a className="nav-link text-white fw-bold text-capitalize fs-5" href="#Link">ropa</a>
+                        </li>
+                        <li className="nav-item p-3 m-3">
+                            <a className="nav-link text-white fw-bold text-capitalize fs-5" href="#Link">accesorios</a>
+                        </li>
+                        <li className="nav-item p-3 m-3">
+                            <a className="nav-link text-white fw-bold text-capitalize fs-5" href="#Link">juguetes</a>
                         </li>
                     </ul>
                     <form className="d-flex">
