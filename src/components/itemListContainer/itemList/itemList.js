@@ -5,7 +5,11 @@ const ItemList = ({productos}) => {
     return (
         <div className="d-flex flex-wrap justify-content-evenly">
         {productos.map((producto) => 
-        <Item key={producto.id} nombre={producto.title} descripcion={producto.description} precio={producto.price} img ={producto.image}/>)}
+        <Item 
+            key={producto.id}
+            {...producto}
+            />
+        )}
         </div>
     )
 }
