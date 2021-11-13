@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import ItemList from "./itemList/itemList";
 import { useParams } from "react-router";
-import NavBar from "../NavBar/NavBar";
 
 const ItemListContainer = () => {
 
@@ -29,7 +28,6 @@ const ItemListContainer = () => {
 
     return (
         <div>
-            <NavBar />
             <div className="productos fs-5 fw-light m-3 p-3">
                 {cargando ? <p>{mensaje}</p> : <ItemList productos={productos} />}
             </div>

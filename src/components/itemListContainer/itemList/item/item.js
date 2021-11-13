@@ -10,11 +10,10 @@ const Item = ({id, title, description, price, image}) => {
             <img src={ urlImg + image} className="card-img-top" alt={title}/>
             <div className="card-body">
                 <h5 className="card-title fw-bold text-uppercase c-purple">{title}</h5>
-                <p className="card-text">{description.substring(0,50)}...</p>
+                {description && <p className="card-text">{description.substring(0,50)}...</p>}
                 <p className="card-text fw-bold c-purple fs-3">${price}</p>
                 <a href="./#" className="btn btn-outline-purple text-uppercase">comprar</a>
                 <Link to={'/item/'+id} className="btn btn-outline-purple text-uppercase">ver</Link>
-
             </div>
         </div>
     )
