@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import ItemDetail from '../itemDetail/ItemDetail';
+import db from "../../db/firebase";
+import { collection, getDocs, query, where } from '@firebase/firestore';
 
 const ItemDetailContainer = ()=> {
 
@@ -9,17 +11,19 @@ const ItemDetailContainer = ()=> {
     const [cargando, setCargando] = useState(true);
     const [mensaje, setMensaje] = useState('Cargando....');
 
-    async function getProductos() {
-        const Api = await fetch('https://6184984aac0b850017489ee4.mockapi.io/productos');
-        return await(Api.json());
-    }
 
     useEffect(() => {
-        const Api = getProductos();
-
-        Api.then((productos) => {
-            const producto=productos.filter(prod => prod.id === parseInt(id, 10))
-            setProducto(producto);
+        const prod = id ? query(collection(db, 'productos' ), where('id', '==',  parseInt(id, 10))) 
+        : collection(db, 'productos' );
+        
+        getDocs(prod).then(respuesta => {
+            const resultado = respuesta.docs.map(doc => {
+                return {
+                    ...doc.data()
+                }
+            });
+            // const producto=resultado.filter(prod => prod.id === parseInt(id, 10))
+            setProducto(resultado);
             setCargando(false);
         }).catch(error => {
             setCargando(true);

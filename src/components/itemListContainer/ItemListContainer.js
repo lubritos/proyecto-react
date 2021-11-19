@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import ItemList from "./itemList/itemList";
 import { useParams } from "react-router";
+import db from "../../db/firebase";
+import { collection, getDocs, query, where  } from "firebase/firestore";
 
 const ItemListContainer = () => {
 
@@ -9,16 +11,18 @@ const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
     const [cargando, setCargando] = useState(true);
     const [mensaje, setMensaje] = useState('Cargando....');
-    async function getProductos() {
-        const Api = await fetch('https://6184984aac0b850017489ee4.mockapi.io/productos');
-        return await(Api.json());
-    }
 
     useEffect(() => {
-        const Api = getProductos();
-        Api.then((productos) => {
-            const prodCategory = productos.filter(prod => prod.category === category);
-            setProductos(category ? prodCategory: productos);
+        const prod = category ? query(collection(db, 'productos' ), where('category', '==',  category)) 
+        : collection(db, 'productos' );
+        
+        getDocs(prod).then(respuesta => {
+            const resultado = respuesta.docs.map(doc => {
+                return {
+                    ...doc.data()
+                }
+            });
+            setProductos(resultado);
             setCargando(false);
         }).catch(error => {
             setCargando(true);
