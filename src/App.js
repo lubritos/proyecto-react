@@ -6,6 +6,9 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import { CartFuncion } from './context/CartContext';
 import CartContainer  from './components/itemCart/ItemCart';
 import NavBar from './components/NavBar/NavBar';
+import { ProductoContext } from './context/ProductContext';
+import FormularioCompras from './components/FormularioCompras';
+import CompraExitosa from './components/CompraExitosa';
 
 
 function App() {
@@ -13,14 +16,18 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <CartFuncion>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<ItemListContainer/>} />
-          <Route path="/category/:category" element={<ItemListContainer/>} />
-          <Route path="/carrito" element={<CartContainer/>} />
-          <Route path="/item/:id" element={<ItemDetailContainer />} />
-        </Routes>
-        <Footer />
+        <ProductoContext>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<ItemListContainer/>} />
+            <Route path="/category/:category" element={<ItemListContainer/>} />
+            <Route path="/carrito" element={<CartContainer/>} />
+            <Route path="/item/:id" element={<ItemDetailContainer />} />
+            <Route path="/checkout" element={<FormularioCompras/>}/>
+            <Route path="/exito" element={<CompraExitosa/>}/>
+          </Routes>
+          <Footer />
+        </ProductoContext>
       </CartFuncion>
       </BrowserRouter>
     </div>

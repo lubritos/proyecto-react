@@ -1,7 +1,6 @@
 import { useContext } from "react"
 import { Link } from "react-router-dom"
 import { Context } from "../../context/CartContext"
-import Item from "../itemListContainer/itemList/item/item"
 
 const CartContainer = ()=>{
     const {cart, borrarProducto, clear, total} = useContext(Context)
@@ -34,8 +33,9 @@ const CartContainer = ()=>{
                             Limpiar
                         </button>
                     </div>
-                    <div className="h-100 w-100 d-flex align-items-end justify-content-end m-3">
-                        <Link to="/" className="d-flex btn btn-outline-purple shadow-none text-uppercase mx-3">Volver al inicio</Link>
+                    <div className="h-100 w-100 d-flex align-items-end justify-content-between m-3">
+                        <Link to="/" className="d-flex btn btn-outline-purple shadow-none text-uppercase mx-3">Seguir Comprando</Link>
+                        <Link to="/checkout" className="d-flex btn btn-outline-purple shadow-none text-uppercase mx-3">continuar</Link>
                     </div>                    
                 </div>
             </div>
