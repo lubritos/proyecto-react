@@ -21,6 +21,7 @@ const Buscador = () => {
     const mostrarBuscador = () => {
         setShow(!show);
         setBusqueda([]);
+        setPalabra('');
     }
     const teclaPresionada = (ev) => {
         if (ev.target.value.length >= 3) {

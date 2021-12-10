@@ -7,6 +7,22 @@ body {
 .productos {
   min-height: 26rem;
 }
+.nav-item:active {
+  border-bottom: oldlace;
+}
+.titulo {
+  color: #fff;
+  font-weight: 800;
+  display: flex;
+  font-size: 5rem;
+  text-transform: uppercase;
+  align-items: center;
+  height: 100%;
+  text-shadow: -5px 7px 2px rgba(0,0,0,0.29);
+}
+.titulo-logo {
+  text-shadow: -5px 7px 2px rgba(0,0,0,0.29);
+}
 .bg-purple {
   background-color: #575b9d;
 }
@@ -32,11 +48,14 @@ body {
   right: 5rem;
 }
 .input-buscador {
-  width: 18rem;
+  width: 16rem;
   height: 2.5rem;
   padding: 0 1rem;
   font-size: 1.2rem;
   transition: 1s;
+}
+.cart {
+  top: -1rem;
 }
 .item-buscador {
   cursor: pointer;
@@ -46,16 +65,16 @@ body {
   margin-bottom: 0.5rem;
 }
 .form-control:focus {
-  box-shadow:  2px 0px 5px 0px #575b9d;
-  border: 1px solid #575b9d;
+  border-color: #bfbcd6b3;
+  box-shadow: 0px 0px 3px 1px #cdc9e7b3;
 }
 .fin-compra:focus{
   box-shadow:  2px 2px 5px #575b9d;
-  border: 1px solid #575b9d;
+  border-color: rgba(87, 91, 157, 0.5);
 }
 .form-select:focus{
-  box-shadow:  2px 0px 5px 0px #575b9d;
-  border: 1px solid #575b9d;
+  border-color: #bfbcd6b3;
+  box-shadow: 0px 0px 3px 1px #cdc9e7b3;
 }
 .item-buscador:hover {
   background-color: #f8f9fa;
@@ -67,6 +86,9 @@ body {
 .card-thumb {
   width: 8rem;
   margin: 1rem;
+}
+.card:hover {
+  border-color: rgba(87, 91, 157, 0.5);
 }
 .itemCarrito:hover {
   background-color: #f8f9fa;
@@ -82,7 +104,7 @@ body {
 }
 .fa-search {
   right: 1rem;
-  top: 4px;
+  top: 5px;
   cursor: pointer;
 }
 .fa.shopping {
@@ -116,6 +138,7 @@ body {
 }
 .search {
   right: 6rem;
+  top: -1rem;
 }
 /* .carousel-inner {
   max-height: 40rem;
@@ -126,18 +149,34 @@ body {
   width: 100%;
 
 }
-.bgProductos {
+.h-bg {
+  height: 38rem;
+}
+.bgAccesorios {
+  background-image: url(/src/assets/img/banner-accesorios-opacidad.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+.bgJuguetes {
+  background-image: url(/src/assets/img/banner-juguetes-opacidad.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+.bgCalzado {
+  background-image: url(/src/assets/img/banner-calzado-opacidad.jpg);
+  background-size: cover;
+  background-position: center bottom;
+}
+.bgItem {
   background-color: #575b9d;
   height: 100%;
   min-height: 10rem;
-}
-.nav-item:hover {
+} 
+.nav-item:hover, .active {
   border:1px solid #f8f9fa;
   border-radius: 10px;
 }
-/* .title-exito {
-  right: 10rem;
-} */
+
 .bg-exito {
     background-image: url(http://kit.detheme.com/lollipop/wp-content/uploads/sites/62/2021/01/pattern-ESTDSBU.png);
     background-position: center center;

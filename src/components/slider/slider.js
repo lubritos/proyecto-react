@@ -12,7 +12,7 @@ const SliderHome = ()=>{
                         className="d-block w-100"
                         style={{
                             height: '45rem',
-                            backgroundImage: `url("${process.env.PUBLIC_URL}/assets/img/banner.jpg")`,
+                            backgroundImage: `url("${process.env.PUBLIC_URL}/assets/img/banner-opacidad.jpg")`,
                             backgroundPosition: 'center center',
                             backgroundSize: 'cover',
                         }}>
@@ -24,7 +24,7 @@ const SliderHome = ()=>{
                         className="d-block w-100"
                         style={{
                             height: '45rem',
-                            backgroundImage: `url("${process.env.PUBLIC_URL}/assets/img/banner-3.jpg")`,
+                            backgroundImage: `url("${process.env.PUBLIC_URL}/assets/img/banner-opacidad-3.jpg")`,
                             backgroundPosition: 'center center',
                             backgroundSize: 'cover',
                         }}>
@@ -36,7 +36,7 @@ const SliderHome = ()=>{
                         className="d-block w-100"
                         style={{
                             height: '45rem',
-                            backgroundImage: `url("${process.env.PUBLIC_URL}/assets/img/banner-2.jpg")`,
+                            backgroundImage: `url("${process.env.PUBLIC_URL}/assets/img/banner-opacidad-2.jpg")`,
                             backgroundPosition: 'center center',
                             backgroundSize: 'cover',
                         }}>

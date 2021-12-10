@@ -1,4 +1,4 @@
-import Logo from '../assets/img/logo.png';
+import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <footer>
@@ -6,9 +6,9 @@ const Footer = () => {
                 <div className="d-flex align-items-center justify-content-between w-100 h-100">
                     <div className="d-flex align-items-center m-3">
                         <div id="logo" className="d-flex flex-column">
-                            <span>
-                                <img src={Logo} width="40" alt=""/>
-                            </span>
+                            <Link to="/">
+                                <img src={`${process.env.PUBLIC_URL}/assets/img/logo.png`} width="40" alt=""/>
+                            </Link>
                             <span className="text-white fw-bold fs-5">
                                 Elephant
                             </span>

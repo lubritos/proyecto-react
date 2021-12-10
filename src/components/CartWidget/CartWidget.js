@@ -13,7 +13,7 @@ const CartWitget = () => {
     
     return mostrarCantidad() && ( 
         <div>
-            <Link to="/carrito" className="position-relative">
+            <Link to="/carrito" className="position-relative cart">
                 <i className="fas fa-shopping-cart text-white fs-4 mx-3"></i>
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                     {mostrarCantidad()}

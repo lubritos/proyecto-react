@@ -24,7 +24,7 @@ const ItemListContainer = () => {
                 }
             });
             const resultCategory = resultado.filter(res => res.category === category);
-            setProductos(resultCategory);
+            setProductos(category ? resultCategory : resultado);
             // eslint-disable-next-line no-unused-expressions
             setProds(resultado);
             setCargando(false);

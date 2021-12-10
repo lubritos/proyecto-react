@@ -16,7 +16,7 @@ const ItemDetail = ({id , title, image, description, stock, price}) => {
         width: '25rem'
     };
     return (
-        <div className="d-flex w-100 justify-content-center align-items-center m-3" >
+        <div className="d-flex w-100 justify-content-center align-items-center m-3">
             <Toast mensaje='producto agregado' fondo='bg-toast' mostrarToast={comprar}/>
             <div className="m-3">
                 <img src={urlImg + image} alt="" style={css}/>
