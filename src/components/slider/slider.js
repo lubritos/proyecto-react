@@ -17,7 +17,6 @@ const SliderHome = ()=>{
                             backgroundSize: 'cover',
                         }}>
                     </div>
-                    {/* <img src={`${process.env.PUBLIC_URL}/assets/img/banner.jpg`} className="d-block w-100 h-50" alt="..."/> */}
                 </div>
                 <div className="carousel-item">
                 <div
@@ -29,7 +28,6 @@ const SliderHome = ()=>{
                             backgroundSize: 'cover',
                         }}>
                     </div>
-                    {/* <img src={`${process.env.PUBLIC_URL}/assets/img/banner-3.jpg`} className="d-block w-100 h-50" alt="..."/> */}
                 </div>
                 <div className="carousel-item">
                 <div
@@ -41,7 +39,6 @@ const SliderHome = ()=>{
                             backgroundSize: 'cover',
                         }}>
                     </div>
-                    {/* <img src={`${process.env.PUBLIC_URL}/assets/img/banner-2.jpg`} className="d-block w-100 h-50" alt="..."/> */}
                 </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

@@ -153,17 +153,17 @@ body {
   height: 38rem;
 }
 .bgAccesorios {
-  background-image: url(/src/assets/img/banner-accesorios-opacidad.jpg);
+  background-image: url('assets/img/banner-accesorios-opacidad.jpg');
   background-size: cover;
   background-position: center center;
 }
 .bgJuguetes {
-  background-image: url(/src/assets/img/banner-juguetes-opacidad.jpg);
+  background-image: url('assets/img/banner-juguetes-opacidad.jpg');
   background-size: cover;
   background-position: center center;
 }
 .bgCalzado {
-  background-image: url(/src/assets/img/banner-calzado-opacidad.jpg);
+  background-image: url('assets/img/banner-calzado-opacidad.jpg');
   background-size: cover;
   background-position: center bottom;
 }
@@ -178,7 +178,7 @@ body {
 }
 
 .bg-exito {
-    background-image: url(http://kit.detheme.com/lollipop/wp-content/uploads/sites/62/2021/01/pattern-ESTDSBU.png);
+    background-image: url('assets/img/pattern-ESTDSBU.png');
     background-position: center center;
     background-size: 507px auto;
     opacity: 0.05;
